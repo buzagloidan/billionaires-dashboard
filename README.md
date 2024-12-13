@@ -1,74 +1,108 @@
-Bloomberg Billionaires Dashboard
-A simple Streamlit-based interactive dashboard that visualizes data from the Bloomberg Billionaires Index. This dashboard allows you to explore the world's richest individuals by country, industry, and net worth, providing metrics, charts, and filtering options.
+# Bloomberg Billionaires Dashboard
 
-Features
-Data Preview: View a filtered list of billionaires, including their rank, name, country, net worth, and industry.
-Key Metrics: Quickly see the total number of billionaires listed and the current richest individual.
-Interactive Filters: Filter by country and industry using the sidebar.
-Visualizations:
-Bar Chart: Top 10 countries by average net worth.
-Scatter Plot: Relationship between YTD (Year-To-Date) change and total net worth.
-Getting Started
-Prerequisites
-Python 3.7 or higher
-Pipenv or a similar virtual environment tool (optional but recommended)
-A stable internet connection to run the Streamlit app locally
-Installation
-Clone the Repository:
+[![Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-red?logo=streamlit)](https://streamlit.io/)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg?logo=python)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
 
-bash
-Copy code
-git clone https://github.com/yourusername/billionaires-dashboard.git
-cd billionaires-dashboard
-Create and Activate a Virtual Environment (Optional):
+An interactive dashboard built with **Streamlit** and **Plotly** to explore the Bloomberg Billionaires Index. Visualize net worth, growth trends, and distributions across countries and industries in a user-friendly environment.
 
-bash
-Copy code
-python3 -m venv venv
-source venv/bin/activate
-Or using Pipenv:
+<img src="path_to_your_screenshot.png" alt="Dashboard Screenshot" width="80%">
 
-bash
-Copy code
-pipenv shell
-Install Requirements:
+## Features
 
-bash
-Copy code
-pip install -r requirements.txt
-This should install streamlit, pandas, plotly, and any other needed dependencies.
+- **Global Data Preview:**  
+  Explore a filtered list of billionaires, including key attributes like Rank, Name, Country, Net Worth, and Industry.
 
-Add Your Data: Place your billionaires.csv dataset in the project directory. Make sure the column names match what the script expects, or adjust them in the code.
+- **Dynamic Filters:**  
+  Use the sidebar to filter by Country and Industry, updating the charts and tables in real-time.
 
-Running the Dashboard
-Once dependencies are installed, run:
+- **Visual Insights:**  
+  - **Top 10 Countries by Average Net Worth:** Quick snapshot of where the wealth is concentrated.
+  - **YTD Change vs. Total Net Worth Scatter:** Understand how fortunes fluctuate over time.
 
-bash
-Copy code
+- **Key Metrics:**  
+  Display the total count of billionaires and identify the richest individual at a glance.
+
+## Getting Started
+
+### Prerequisites
+
+- **Python 3.9+** (though it may work with earlier versions)
+- **pip** or **conda** for installing dependencies
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/buzagloidan/billionaires-dashboard.git
+   cd billionaires-dashboard
+   ```
+
+2. **Create a virtual environment (recommended):**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+   On Windows:
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+
+3. **Install required packages:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Add the dataset:**
+   Place your `billionaires.csv` file in the project directory. Make sure it matches the expected format (see code comments in `dashboard.py`).
+
+### Running the Dashboard
+
+```bash
 streamlit run dashboard.py
-You should see a URL in your terminal, typically http://localhost:8501. Open it in your browser to view the dashboard.
+```
 
-Customization
-Adjust Column Names: If your dataset has different column names, update them in dashboard.py.
-Add More Charts: Feel free to expand dashboard.py with additional charts or metrics.
-Styling and Layout: Modify the Streamlit layout with st.sidebar, st.columns, and Streamlit themes as you like.
-Example Screenshots
-(Insert screenshots here if available. For example, a screenshot of the dashboard’s main view.)
+After running the command, open the provided URL (usually `http://localhost:8501`) in your web browser.
 
-Contributing
-Fork the repository.
-Create a new branch for your feature or bugfix:
-bash
-Copy code
-git checkout -b feature/your-feature-name
-Commit your changes:
-bash
-Copy code
-git commit -m "Add your feature"
-Push to your branch:
-bash
-Copy code
-git push origin feature/your-feature-name
-Create a new Pull Request and describe your changes.
-License
-This project is licensed under the MIT License.
+## Directory Structure
+
+```
+billionaires-dashboard/
+├─ dashboard.py
+├─ requirements.txt
+├─ billionaires.csv
+└─ README.md
+```
+
+## Example Screenshots
+
+*Home View (All Countries):*  
+*(Insert a screenshot or GIF here)*
+
+## Customization
+
+- **Columns & Renaming:** Adjust column names or mapping in `dashboard.py` if your dataset differs.
+- **Filters:** Add more filters (e.g., by net worth range) using `st.slider` or `st.multiselect`.
+- **Charts:** Experiment with other Plotly chart types like pie charts, histograms, or box plots for richer insights.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch:  
+   ```bash
+   git checkout -b feature/new-feature
+   ```
+3. Commit your changes:  
+   ```bash
+   git commit -m "Add new feature"
+   ```
+4. Push to your branch:  
+   ```bash
+   git push origin feature/new-feature
+   ```
+5. Open a Pull Request and describe your changes
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
