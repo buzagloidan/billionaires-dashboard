@@ -6,7 +6,7 @@
 
 An interactive dashboard built with **Streamlit** and **Plotly** to explore the Bloomberg Billionaires Index. Visualize net worth, growth trends, and distributions across countries and industries in a user-friendly environment.
 
-<img src="path_to_your_screenshot.png" alt="Dashboard Screenshot" width="80%">
+<img src="screenshot.png" alt="Dashboard Screenshot" width="80%">
 
 ## Features
 
