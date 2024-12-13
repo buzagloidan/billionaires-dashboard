@@ -75,11 +75,6 @@ billionaires-dashboard/
 └─ README.md
 ```
 
-## Example Screenshots
-
-*Home View (All Countries):*  
-*(Insert a screenshot or GIF here)*
-
 ## Customization
 
 - **Columns & Renaming:** Adjust column names or mapping in `dashboard.py` if your dataset differs.
